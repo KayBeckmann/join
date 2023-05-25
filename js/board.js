@@ -303,6 +303,7 @@ function renderAssignedUserName(user) {
  * function when the "Save Task" button is clicked. It is used to determine whether the task being
  * added is a new task or an edited task.
  */
+//ToDo: Redirect implementieren
 function showAddTask(state) {
   document.getElementById("addtask-card-headline").innerHTML = "Add Task";
   document

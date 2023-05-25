@@ -1037,18 +1037,18 @@ input[type="radio"] {
 
 /* Mobile View */
 @media (max-height: 800px) {
-  .login-btns{
+  .login-btns {
     padding: 4px 0px;
-  gap: 5px;
-  margin-top: 5px;
+    gap: 5px;
+    margin-top: 5px;
   }
 
   .btn-login,
-   .btn-small{
+  .btn-small {
     max-height: 25px;
   }
 
-  .font-21{
+  .font-21 {
     font-size: 15px;
   }
 
@@ -1058,4 +1058,3 @@ input[type="radio"] {
     bottom: 0;
   }
 }
-

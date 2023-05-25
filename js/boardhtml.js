@@ -17,7 +17,9 @@ function renderCard(task) {
   return /* html */ `
   <div id="${cardID}" class="task-card pointer" onclick="selectInputType(${
     task.id
-  })" draggable="true" ondragstart="drag(${task.id})" ondragend="hideDropZone()">
+  })" draggable="true" ondragstart="drag(${
+    task.id
+  })" ondragend="hideDropZone()">
         <div style="background-color: ${
           task.category.color
         }" class="taskcard-category flex center">
@@ -42,9 +44,9 @@ function renderCard(task) {
     }" class="card-touch-menu display-none">Here I am!!!</div>`;
 }
 
-function renderCardProgressbar(task){
-  if(task.subtask.length){
-    return /* html */`
+function renderCardProgressbar(task) {
+  if (task.subtask.length) {
+    return /* html */ `
   <div class="taskcard-subtasks flex center gap-s space-between"> 
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: ${
@@ -53,8 +55,8 @@ function renderCardProgressbar(task){
           </div>
           <span class="taskcard-subtasks-done">${countDoneSubtasks(
             task.subtask
-          )}/${task.subtask.length} Done</span></div>`
-  }else{
+          )}/${task.subtask.length} Done</span></div>`;
+  } else {
     return "";
   }
 }

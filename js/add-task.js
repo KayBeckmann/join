@@ -24,7 +24,8 @@ async function initAddTask() {
  * being saved. It has a default value of "ToDo" which means that if no state is provided, the task
  * will be saved in the "ToDo" state. However, if a different state is provided as an argument, the
  */
-function saveTask(state = "ToDo") {
+//ToDo: Redirect implementieren
+function saveTask(state = "ToDo", redirect = true) {
   const title = document.getElementById("task-title").value;
   const description = document.getElementById("task-description").value;
   let task = {
