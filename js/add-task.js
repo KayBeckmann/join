@@ -24,7 +24,6 @@ async function initAddTask() {
  * being saved. It has a default value of "ToDo" which means that if no state is provided, the task
  * will be saved in the "ToDo" state. However, if a different state is provided as an argument, the
  */
-//ToDo: Redirect implementieren
 function saveTask(state = "ToDo", redirect = true) {
   const title = document.getElementById("task-title").value;
   const description = document.getElementById("task-description").value;
@@ -39,7 +38,7 @@ function saveTask(state = "ToDo", redirect = true) {
     state: state,
     subtask: subtasks
   };
-  checkInputs(task);
+  checkInputs(task, redirect);
 }
 
 /**
@@ -50,7 +49,7 @@ function saveTask(state = "ToDo", redirect = true) {
  * and if the due date is a valid number before adding the task to an array called "tasks" and storing
  * it in
  */
-function checkInputs(task) {
+function checkInputs(task, redirect) {
   if (
     task.title != "" &&
     task.description != "" &&
@@ -60,7 +59,7 @@ function checkInputs(task) {
   ) {
     tasks.push(task);
     backend.setItem("tasks", tasks);
-    showTaskAddedInfobox();
+    showTaskAddedInfobox(redirect);
   } else {
     checkAlert(task);
   }
@@ -69,11 +68,16 @@ function checkInputs(task) {
 /**
  * Show the infobox for 'Task added'
  */
-function showTaskAddedInfobox() {
+function showTaskAddedInfobox(redirect) {
   document
     .getElementById("task-added-infobox")
     .classList.remove("display-none");
-  loadPageWithDelay("./board.html");
+  if (redirect) {
+    loadPageWithDelay("./board.html");
+  } else {
+    toggleVisibility("addtask-dialog");
+    loadTask(tasks);
+  }
 }
 
 /**

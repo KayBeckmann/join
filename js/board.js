@@ -308,7 +308,7 @@ function showAddTask(state) {
   document.getElementById("addtask-card-headline").innerHTML = "Add Task";
   document
     .getElementById("save-task-button-desktop")
-    .setAttribute("onClick", `saveTask(${'"' + state + '"'})`);
+    .setAttribute("onClick", `saveTask(${'"' + state + '"'}, ${false})`);
   document
     .getElementById("save-task-button-mobile")
     .setAttribute("onClick", `saveTask(${'"' + state + '"'})`);
