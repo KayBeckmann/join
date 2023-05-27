@@ -130,10 +130,10 @@ function showTask(id) {
     <span class="tcp-subline">Assigned to:</span>
     ${renderUser(task)}
   </div>
-  <button class="tcb-btn-delete-task flex center" onclick="deleteTask(${
+  <button class="tcb-btn-delete-task flex center pointer" onclick="deleteTask(${
     task.id
   })"><img class="icon-white" src="../assets/img/icons/icon-delete.svg"></button>
-  <button class="tcb-btn-edit-task flex center" onclick="loadEditTask(${id})"><img class="icon-white" src="../assets/img/icons/icon-to-do.svg"></button>
+  <button class="tcb-btn-edit-task flex center  pointer" onclick="loadEditTask(${id})"><img class="icon-white" src="../assets/img/icons/icon-to-do.svg"></button>
 `;
 }
 
