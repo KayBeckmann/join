@@ -166,7 +166,7 @@ function renderAddEditUser(
             <img src="../assets/img/icons/icon-phone.svg" />
           </div>
           <div class="nc-btn-box flex-row center gap">
-            <button class="nc-btn-light flex center btn-line desktop" onclick="toggleVisibility('add-edit-contact')">Cancel <img class="line-btn" src="../assets/img/icons/icon-x.svg"></button>
+            <button class="nc-btn-light flex center btn-line desktop hide-between" onclick="toggleVisibility('add-edit-contact')">Cancel <img class="line-btn" src="../assets/img/icons/icon-x.svg"></button>
             <button class="nc-btn" onclick="save(${id})">${checkout} <img src="../assets/img/icons/icon-check.svg"></button>
           </div>
         </div>

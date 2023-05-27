@@ -131,6 +131,7 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
+  z-index: 300;
 }
 
 .nc-card {
@@ -230,6 +231,14 @@ input::-webkit-inner-spin-button {
   .contacts-col-l,
   .contacts-col-r {
     padding-left: calc(48px + var(--nav-width-d));
+  }
+
+  .hide-between {
+    display: none;
+  }
+
+  .nc-card-top {
+    height: 50%;
   }
 }
 
@@ -385,7 +394,7 @@ input::-webkit-inner-spin-button {
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    z-index: 2;
+    z-index: 300;
   }
 
   .nc-card {
@@ -434,6 +443,7 @@ input::-webkit-inner-spin-button {
     border-top-right-radius: unset;
     border-top-left-radius: var(--border-radius-xl);
     padding: 0 46px;
+    height: 594px !important;
   }
 
   .nc-card-bottom {
